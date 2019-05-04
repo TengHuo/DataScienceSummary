@@ -1,0 +1,4 @@
+# Data Collection
+
+- Sqoop
+- Flume
