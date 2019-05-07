@@ -2,12 +2,13 @@
 
 ## Introduction
 
-- Overview
+- Introduction to the topic
+- Data analytics & Big data
 
 ## Data Collection
 
-- Sqoop
-- Flume
+- Overview
+- Data Collection
 
 ## Software Stack
 

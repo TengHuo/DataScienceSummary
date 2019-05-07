@@ -32,3 +32,5 @@ $a \times b$
 
 [希腊字母及其latex](https://blog.csdn.net/lanchunhui/article/details/49819445)
 
+nature join: $\Join$
+
