@@ -4,7 +4,8 @@
 
 ### Data based on who creates them
 
-*补充Data based on who creates them*
+- **Human-generated** (e.g., Social media ontent, emails, messages, documents)
+- **Machine-generated** (e.g., DBMS log, sensor readings, network traces)
 
 ### Data based on their format
 
@@ -61,25 +62,46 @@ It involves:
 
 ### Analytic types
 
-*补充细节*
-
 #### 1. Descriptive
 
 Aim to answer **what** has happened, based on past data that are presented in a **summarized** form.
+
+e.g.,
+
+1. Basic statistics: Mean, Median, Variance, Count, Top-N, Distinct
+2. Linear algebraic computations: Linear Regression, Principla Component Analysis, Singular Value Decomposition
 
 #### 2. Diagnostic
 
 Aim to answer **why** it has happened, based on past data
 
+e.g.,
+
+1. Clustering
+2. Search shortest paths, minimum spanning tree
+
 #### 3. Predictive
 
-Aim to answer **what is likely to happen**, based on existing data
+Aim to answer **what is likely to happen** based on existing data.
 
 #### 4. Prescriptive
 
 Aim to answer **what can we do to make something happen**, based on existing data
 
+e.g.,
 
+1. Optimization
+2. Alignment problems
+
+### Settings in Analytics
+
+**Default**: the dataset is stored in RAM
+
+**Streaming**: data arrive as a stream, a part (window) is stored
+
+**Distributed**: data are distributed over multiple machines (in RAM and/or disk)
+
+**Multi-threaded**: data are in one machine and multiple processors share the RAM of the machine
 
 
 

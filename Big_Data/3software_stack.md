@@ -1,11 +1,12 @@
 # Software Stack
 
-## Software for Big Data Analysis in Batch mode
+## Overview
 
+### Distributed File System
 
-
-
-## Distributed File System
+- stores large data
+- provides replication
+- protects against failures
 
 Files are **divided into chunks** that are stored in chunk servers and **replicated** on different machines or racks (recovery from server or rack failures)
 
@@ -16,6 +17,13 @@ Files are **divided into chunks** that are stored in chunk servers and **replica
   - reads and appends are comon
 
 ![](./images/hdfs.png)
+
+### Programming Model
+
+- performs large-scale, distributed compuations efficiently
+- tolerates hardware failures
+
+MapReduce is such a programming model / system / paradigm
 
 
 
@@ -38,7 +46,7 @@ extract something you care about
 - Output: a possibly empty list of key-value pairs
 - One Map call for every different (k,v) pair
 
-### Suffle and Sorte Task
+### Shuffle and Sort Task
 
 - Performed by the system automatically.
 - Data from all mappers are grouped by the key, split among reducers, and sorted by the key.
@@ -51,6 +59,21 @@ extract something you care about
 - Input: a key and a possibly empty list of its associated values
 - Output: A possibly empty list of key-value pairs
 - One Reduce function for every different key $k’$.
+
+### Refinement: Combiner
+
+Often a Map task will produce many pairs of the form $(k, v_1)$, $(k, v_2)$, ... for the same key $k$. Combiner can save network time by **pre-aggregating values in the mapper**.
+
+It can only be applied to a function that is commutative and associative. (e.g., max(5, 4, 1, 2) == max(max(5, 1), max(4 ,2))). Its input & output mush be of the same type as that of the mapper.
+
+### Refinement: Partitioner
+
+- **Divides** data (key, value) pairs of Map tasks,
+- Ensures that the **same key** (that can be output by multiple mappers) goes to the same reducer.
+
+### Refinement: Backup Tasks
+
+**There are slow workers**. they significantly lengthen the job completion time. When MR operation is about to complete, spawn backup copies of in-progress tasks
 
 ### Workflow
 
@@ -91,11 +114,5 @@ MapReduce task is aborted (needs to be restarted)
 
 - Only in-progress tasks are reset to idle,
 - Reduce task is rescheduled to start later.
-
-**There are slow workers**
-
-When MR operation is about to complete, spawn backup copies of in-progress tasks
-
-
 
 

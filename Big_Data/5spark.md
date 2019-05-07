@@ -7,8 +7,8 @@
 
 ### Drawback of MapReduce
 
-- Map Reduce is inefficient for applications that reuse intermediate results across multiple computations.
-- Map Reduce is inefficient for interactive data mining (multiple ad-hoc queries on the same data)
+- Map Reduce is inefficient for applications that **reuse intermediate results** across multiple computations.
+- Map Reduce is inefficient for **interactive data mining** (multiple ad-hoc queries on the same data)
 
 
 ## Overview of Resilient Distributed Datasets (RDDs)
@@ -51,4 +51,30 @@ Thus, RDDs restricted to applications performing bulk writes.
 
 
 ## pySpark
+
+### Parallelized collections
+
+- Created by the parallelize method of sc on an existing iterable or collection **d**
+- The elements of **d** are copied to form a distributed dataset that can be operated on in parallel
+
+### count
+
+Returns the number of elements in this RDD
+
+### filter
+
+### map
+
+### flatMap
+
+### collect
+
+### sample
+
+### Reduce
+
+### Aggregate
+
+### Accumulators
+
 

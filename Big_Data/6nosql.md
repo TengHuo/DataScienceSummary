@@ -45,16 +45,23 @@ RECALL: **ACID**
 
 In any distributed system, you have to partition. That leaves either consistency or availability to choose from.
 
-
-
-*补充NoSQL适合big data的3v*
-
 ### Characteristics of NoSQL databases: BASE
 
 - **Basically Available**: will always acknowledge a client’s request (answer or success/failure notification)
 - **Soft state**: may be inconsistent when data are read
 - **Eventually consistent**: reads after write may not return consistent results, but they will once changes propagated to all nodes
 
+### NoSQL and 3Vs of Big Data
+
+- **Volume**
+  - NoSQL databases allow scaling out (adding more nodes to a commodity server)
+
+- **Velocity**
+  - Fast writes uing schema-on-read (data are applied to a schema as they go out of the database)
+  - Low write latency (adding nodes decreases latency)
+
+- **Variety**
+  - Can store semi-structured and unstructured data, schema is loose or non-existent
 
 ### RDBMS vs. NoSQL
 
@@ -72,7 +79,7 @@ In any distributed system, you have to partition. That leaves either consistency
 
 ## NoSQL
 
-### 1. Key/value
+### 1. Key/value databases
 
 - Store key-value pairs
 - Keys are unique
@@ -83,11 +90,45 @@ In any distributed system, you have to partition. That leaves either consistency
 
 **Pros**:
 
+- very fast
+- simple model
+- able to scale horizontally
 
-### 2. Document
+**Cons**:
+
+- many data structures (objects) can't be easily modeled as key value pairs
+
+**Suitable when**:
+
+- Unstructured data
+- Fast read/writes
+- Key suffices for identifying value
+- No dependences among values
+- Simple insert/delete/select operations
+
+**Unsuitable when**:
+
+- Operations (search, filter, update) on individual attributes of the value
+- Operations on multiple keys in a single transaction
+
+### 2. Document databases
 
 - Store documents in a semi-structured form
 - A document is a nested structure in JSON or XML format
+
+**Suitable when**:
+
+- Semi-structured data with flat or nested schema
+- Search on different values of document
+- Updates on subsets of values
+- CRUD operations (Create, Read, Update, Delete)
+- Schema changes are likely
+
+**Unsuitable when**:
+
+- Binary data
+- Updates on multiple documents in a single transaction
+- Joins between multiple documents
 
 ### 3. Column-family
 
@@ -95,19 +136,128 @@ In any distributed system, you have to partition. That leaves either consistency
 - Group related columns in a row
 - A row does not necessarily have fixed schema or number of columns
 
+**Suitable when**:
+
+- Data has tabular structure with many columns and sparsely populated rows (i.e., high-dimensional matrix with many 0s)
+- Columns are interrelated and accessed together often
+- OLAP
+- Realtime random read-write is needed
+- Insert/select/update/delete operations
+
+**Unsuitable when**:
+
+- Joins
+- ACID support is needed
+- Binary data
+- SQL-compliant queries
+- Frequently changing query patterns that lead to column restructuring
+
 ### 4. Graph
 
 - Store graph-structured data
 - Optimized for representing connections
 - Designed to allow efficient queries for finding interconnected nodes based on node and/or edge attributes
 
+**Suitable when**:
+
+- Data comprised of interconnected entities
+- Queries are based on entity relationships
+  - Finding groups of interconnected entities
+  - Finding distances between entities
+
+**Unsuitable when**:
+
+- Joins
+- ACID support is needed
+- Binary data
+- SQL-compliant queries
+- Frequently changing query patterns that lead to column restructuring
+
+**Aplications**
+
+- Social
+- Recoomendation
+- Geo
+
 ## MongoDB
 
-*补充MongoDB细节*
+### Overview
+
+- **A document database**
+- **Hash-based**
+  - Stores hashes (system-assigned id) with keys and values for each document
+- **Dynamic shcema**
+  - No Data Definition Language
+  - Application tracks the schema and mapping
+- Uses **BSON** (Binary JSON) format
+- **APIs** for many Languages
 
 
 
+### CRUD
 
+#### Create
+
+```javascript
+db.products.insert({ _id:10, item: "box", qty: 20 })
+```
+
+#### Read
+
+```javascript
+db.products.update(*****)
+```
+
+#### Update
+
+```javascript
+db.products.find( { qty: { $gt: 4 } } )
+```
+
+#### Delete
+
+```javascript
+db.products.remove( {“item”:”box”} )
+```
+
+
+
+### Replication
+
+Multiple replicas (dataset copies) are stored
+
+**Replica set**: group of <=50 mongod instances that contain the same copy of the dataset
+
+
+
+### Sharding
+
+Sharding is the process of horizontally partitioning the dataset into parts (shards) that are distributed across multiple nodes
+
+#### Benefits
+
+1. **Efficient reads and writes**: They are distributed across the shards.
+  - More shards, higher efficiency
+2. **Storage capacity**: Each shard has a part of the dataset
+  - More shards, increased capacity
+3. **High availability**: Partial read / write operations performed if shards are unavailable. Reads or writes directed at the available shards can still succeed.
+  - More shards, less chance of a shard to be unavailable
+
+
+
+### Index Support
+
+B+ tree indices, GeoSpatial indices, text indices
+
+
+
+### Fast in-place updates
+
+In-place updates are **fast** because the database does not have to allocate and write a full new copy of the object.
+
+
+
+### MapReduce functionality
 
 
 
