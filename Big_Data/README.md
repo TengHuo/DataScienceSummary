@@ -1,38 +1,39 @@
 # Big Data
 
-## Introduction
+## 1. Introduction
 
 - Introduction to the topic
 - Data analytics & Big data
 
-## Data Collection
+## 2. Data Collection
 
 - Overview
 - Data Collection
 
-## Software Stack
+## 3. Software Stack
 
 - HDFS
 - MapReduce
 
-## Data Processing: MapReduce
+## 4. Data Processing: MapReduce
 
 - MapReduce
 
-## Data Processing: Spark
+## 5. Data Processing: Spark
 
 - Spark
+- pySpark
 
-## NoSQL Databases
+## 6. NoSQL Databases
 
 - MongoDB
 
-## Big Data Warehousing
+## 7. Big Data Warehousing
 
 - Hive
 - SparkSQL
 
-## Data Streams
+## 8. Data Streams
 
 - Querying
 - Sampling

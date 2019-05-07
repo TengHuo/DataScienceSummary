@@ -1,3 +1,0 @@
-# Data Processing: Spark
-
-- Spark

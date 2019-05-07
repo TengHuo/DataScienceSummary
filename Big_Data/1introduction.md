@@ -2,6 +2,10 @@
 
 ## Introduction to the topic
 
+### Data based on who creates them
+
+*补充Data based on who creates them*
+
 ### Data based on their format
 
 - **Structured** (e.g. Banking transactions, electronic health records)
@@ -18,7 +22,7 @@
   - Non-relational data with a defined level of strcture or consistency
   - Hierarchical or graph-based
 
-- ** Metadata** (e.g. XML tags for the author and creation data of a document)
+- **Metadata** (e.g. XML tags for the author and creation data of a document)
   - Provides information about a dataset's characteristics and structure
   - Data provenance
 
@@ -56,6 +60,8 @@ It involves:
 - Contextualization
 
 ### Analytic types
+
+*补充细节*
 
 #### 1. Descriptive
 

@@ -47,6 +47,8 @@ In any distributed system, you have to partition. That leaves either consistency
 
 
 
+*补充NoSQL适合big data的3v*
+
 ### Characteristics of NoSQL databases: BASE
 
 - **Basically Available**: will always acknowledge a client’s request (answer or success/failure notification)
@@ -101,7 +103,7 @@ In any distributed system, you have to partition. That leaves either consistency
 
 ## MongoDB
 
-
+*补充MongoDB细节*
 
 
 
