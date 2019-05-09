@@ -9,15 +9,19 @@
 
 - Overview
 - Data Collection
+  - Apache Sqoop
+  - Apache Flume
+  - Messaging Queue
 
 ## 3. Software Stack
 
-- HDFS
+- Overview
 - MapReduce
 
 ## 4. Data Processing: MapReduce
 
-- MapReduce
+- MapReduce Patterns
+- Measurement for MR
 
 ## 5. Data Processing: Spark
 
@@ -26,6 +30,8 @@
 
 ## 6. NoSQL Databases
 
+- Introduction
+- NoSQL
 - MongoDB
 
 ## 7. Big Data Warehousing
@@ -35,10 +41,13 @@
 
 ## 8. Data Streams
 
-- Querying
-- Sampling
-- Filtering
-- Counting
-- Aggregate
-- Statistic Estimation
-- Spark Streaming
+- Overview
+- Sampling from data stream
+- Queries over a (long) sliding window
+- Filtering a data stream: Bloom filters
+- Counting distinct elements: Flajolet-Martin
+- Estimation moments: AMS method
+
+## 9. Spark Streaming
+
+- Overview

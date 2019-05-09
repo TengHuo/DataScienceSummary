@@ -46,3 +46,22 @@ An open-source data warehousing solution built on top of Hadoop, which supports 
 
 ## SparkSQL
 
+A new module in Apache Spark that integrates relational processing with Spark’s functional programming API. It lets Spark programmers leverage the benefits of relational processing (e.g., declarative queries and optimized storage). It lets SQL users call complex analytics libraries in Spark (e.g., machine learning).
+
+### Motivation
+
+1. Supporting **relational processing** both **within Spark programs** (on native RDDs) and **on external data sources** using a programmer-friendly API.
+2. Providing **high performance using established DBMS** techniques.
+3. Easily **supporting new data sources**, including semi-structured data and external databases amenable to query federation.
+4. Enabling **extension with advanced analytics algorithms** such as graph processing and machine learning.
+
+
+
+
+
+
+
+
+
+
+

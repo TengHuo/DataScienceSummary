@@ -5,7 +5,7 @@
 ### Online Transaction Processing (OLTP) systems
 
 - **Store**: structured data, in Relational Databases
-- ** Queries**: simple (insert, delete, update operations)
+- **Queries**: simple (insert, delete, update operations)
 - **Relation to Big Data**: Big Data analysis results can augment OLTP data
 
 ![](./images/oltp.png)
@@ -13,7 +13,7 @@
 ### Online Analytical Processing (OLAP) systems
 
 - **Store**: data in databases that are optimized for analytics
-- ** Queries**: are long and complex - part of analytic tasks (business intelligence, data mining, machine learning)
+- **Queries**: are long and complex - part of analytic tasks (business intelligence, data mining, machine learning)
 - **Relation to Big Data**: serve as sources and sinks
 
 ![](./images/olap.png)
@@ -79,7 +79,7 @@ In any distributed system, you have to partition. That leaves either consistency
 
 ## NoSQL
 
-### 1. Key/value databases
+### 1. Key/value Databases
 
 - Store key-value pairs
 - Keys are unique
@@ -111,7 +111,7 @@ In any distributed system, you have to partition. That leaves either consistency
 - Operations (search, filter, update) on individual attributes of the value
 - Operations on multiple keys in a single transaction
 
-### 2. Document databases
+### 2. Document Databases
 
 - Store documents in a semi-structured form
 - A document is a nested structure in JSON or XML format
@@ -130,7 +130,7 @@ In any distributed system, you have to partition. That leaves either consistency
 - Updates on multiple documents in a single transaction
 - Joins between multiple documents
 
-### 3. Column-family
+### 3. Column-family Databases
 
 - They store columns. Each column has a name and value.
 - Group related columns in a row
@@ -152,7 +152,7 @@ In any distributed system, you have to partition. That leaves either consistency
 - SQL-compliant queries
 - Frequently changing query patterns that lead to column restructuring
 
-### 4. Graph
+### 4. Graph Databases
 
 - Store graph-structured data
 - Optimized for representing connections
@@ -224,15 +224,21 @@ db.products.remove( {“item”:”box”} )
 
 ### Replication
 
-Multiple replicas (dataset copies) are stored
+Multiple replicas (dataset copies) are stored. Provides scalability (distributed operations), availability (due to 
+
+redundancy), and fault tolerance (automatic failover).
 
 **Replica set**: group of <=50 mongod instances that contain the same copy of the dataset
+
+![](./images/mongodb_replication.png)
 
 
 
 ### Sharding
 
 Sharding is the process of horizontally partitioning the dataset into parts (shards) that are distributed across multiple nodes
+
+![](./images/mongodb_sharding.png)
 
 #### Benefits
 
