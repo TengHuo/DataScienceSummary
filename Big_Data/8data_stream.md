@@ -71,7 +71,7 @@ Many queries are about a **window containing** the **N most recent** elements.
 
 ### Problem
 
-Data stream consists of many elements chosen from a set of size N. Maintain a count of the number of distinct elements seen so far
+Data stream consists of many elements chosen from a set of size N. Maintain a count of the number of **distinct elements seen so far**.
 
 ![](./images/Flajolet-Martin_example.png)
 

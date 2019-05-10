@@ -223,9 +223,3 @@ if __name__ == '__main__':
 **Key complexity**: **Over all key-value pairs**, input or output by any Mapper or Reducer, compute
 
 **Sequential complexity**: **Over all mappers and reducers**, sum
-
-
-
-
-
-

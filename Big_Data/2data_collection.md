@@ -71,17 +71,17 @@ tools and frameworks to **collect and ingest data** from **various sources** int
   - **Source connectors** import data from another system (e.g., relational database) into a centralized data store (e.g., distributed file system)
   - **Sink connectors** export data to another system (e.g., HDFS)
 
-3. Database connectors (Apache Sqoop)
+3. **Database connectors** (Apache Sqoop)
 
   Import data from relational DBMSes into big data storage and analytics frameworks
 
-4. Messaging Queues (ZeroMQ)
+4. **Messaging Queues** (ZeroMQ)
 
   - **Producers** push data to the queues
   - **Consumers** pull the data from the queues
   - Producers and consumers **do not need to be aware of each other**
 
-5. Custom connectors
+5. **Custom connectors**
 
   Built based on the data sources and data collection requirements
 
