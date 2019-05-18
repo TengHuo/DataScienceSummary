@@ -34,3 +34,15 @@ $a \times b$
 
 nature join: $\Join$
 
+[各种大括号](https://blog.csdn.net/bendanban/article/details/44221279)
+
+x的平均值：$ \bar x$
+
+$\neq$
+
+$\infty$
+
+[各种常用符号](http://mohu.org/info/symbols/symbols.htm)
+
+$\prod_{i=1}^{n}$
+
