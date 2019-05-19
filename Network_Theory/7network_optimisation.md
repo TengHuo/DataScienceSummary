@@ -1,14 +1,18 @@
-# Introduction to Network Optimisation
+# Network Optimisation
 
-## What is optimisation
+Lecture 10, 11
 
-## What is network optimisation
+## Optimisation Overview
 
-## KPIs for network optimisation
+### What is network optimisation
+
+Network optimisation refers to a set of techniques used to improve performance of the network.
+
+### KPIs for network optimisation
+
+### Steps of network optimisation
 
 ## Steps of network optimisation
-
-## Minimum Cost Flow Problem
 
 
 

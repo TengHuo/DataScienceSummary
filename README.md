@@ -1,13 +1,18 @@
 # King's MSc Data Science Module Summary
 
-## [Data Mining](./Data_Mining)
+**How to use?**
 
-## [Pattern Recognition](./Pattern_Recognition)
+Download [typora](https://typora.io/), open .md files with typora.
 
-## [Big Data Technologies](./Big_Data)
+## Table of Contents
 
-## [Network Theory](./Network_Theory)
+### [Data Mining](./Data_Mining)
 
-## Others
+### [Pattern Recognition](./Pattern_Recognition)
+
+### [Big Data Technologies](./Big_Data)
+
+### [Network Theory](./Network_Theory)
 
 ### [Latex](./Latex)
+

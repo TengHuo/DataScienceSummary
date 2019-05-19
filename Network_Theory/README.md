@@ -12,9 +12,7 @@
 
 ## Markov Decision Processes
 
-## Introduction to Network Optimisation
-
-## Network Flow Optimisation
+## Network Optimisation
 
 ## Examples of Network Opimisation
 

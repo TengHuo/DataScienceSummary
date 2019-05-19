@@ -4,6 +4,8 @@
 
 $\leq$
 
+$\geq$
+
 $\in$
 
 $\sum_{i=1}^{N}a_i$
@@ -34,7 +36,9 @@ $a \times b$
 
 nature join: $\Join$
 
-[各种大括号](https://blog.csdn.net/bendanban/article/details/44221279)
+[各种矩阵写法](https://blog.csdn.net/bendanban/article/details/44221279)
+
+[各种大括号写法](https://blog.csdn.net/miao0967020148/article/details/78712811)
 
 x的平均值：$ \bar x$
 
