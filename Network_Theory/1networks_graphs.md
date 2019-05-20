@@ -108,6 +108,14 @@ For an undirected graph (N, g ):
 
 A path is a walk where there are no repeated nodes. 
 
+## Eulerian Path
+
+An **Eulerian path** in a graph 𝐺 is a path that passes through **every edge** of 𝐺 exactly **once**.
+
+An **undirected graph** has an Eulerian tour if and only if all its vertices have **even degree**.
+
+A **directed graph** has an Eulerian cycle if and only if every vertex has **equal in degree** and **out degree**.
+
 ## Network Properties
 
 ### Degree distributions, P(k)
@@ -148,7 +156,9 @@ $$
 
 where $e_i$ is the number of edges between the neighbors of node i
 
-Average clustering
+![](./images/clustering_coefficient.png)
+
+**Average clustering**
 
 $$
 C = \frac{1}{N}\sum_i^NC_i
@@ -213,13 +223,17 @@ $$
 
 P(E) is the Binomial distribution.
 
-$$
-E(number of edges) = p
-$$
-
 #### Degree Distribution of a Random Graph
 
-What is P(k)?
+A graph in G(n, p) has on average $\left(\begin{matrix}n\\2\end{matrix}\right)p$ edges (degrees).
+
+$$
+\left(
+  \begin{matrix}
+    n\\2
+  \end{matrix}
+\right) = \frac{n!}{k!(n-k)!}
+$$
 
 - P(k) denotes the fraction of nodes with degree k.
 - P(k) has the Binomial distribution.
@@ -231,20 +245,37 @@ $$
 Mean and variance of a Binomial distribution
 
 $$
-E(k) = \bar k = p(n-1)
+\bar k = p(n-1)
 $$
 
 $$
 \sigma^2 = p(1-p)(n-1)
 $$
 
-### Isoloated Nodes
+### Clustering Coefficient in random graphs
 
-### Evolution of Random Graphs
+The clustering coefficient were represented as:
+
+$$
+C_i = \frac{2e_i}{k_i(k_i - 1)}
+$$
+
+Edges in $G_{np}$ appear i.i.d with probability p.
+
+$$
+e_i = p \frac{k_i(k_i - 1)}{2}
+$$
+
+The clustering coefficient can be re-written as:
+
+$$
+C = \frac{p*k_i(k_i-1)}{k_i(k_i-1)} = p = \frac{\bar{k}}{N}
+$$
+
+For a fixed average degree, C decreases with the network size N
 
 
-
-
+### Extract
 
 [sequence degree画graph](http://szhorvat.net/pelican/hh-connected-graphs.html)
 
