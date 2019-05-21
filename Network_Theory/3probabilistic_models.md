@@ -101,19 +101,3 @@ Expected number of people that infects: $q*d$
 
 ### SIS Model
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

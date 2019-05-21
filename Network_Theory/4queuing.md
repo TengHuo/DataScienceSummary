@@ -91,6 +91,18 @@ $$
 P(n) = \frac{(m^m\rho^n)^n}{m!}P(0)
 $$
 
+$P_Q$ , the probability that an arriving customer is forced to join the queue is given by
+
+$$
+P_Q = \sum_{n>m}P(n) \sim \frac{(mp)^mP(0)}{m!(1-\rho)}
+$$
+
+$N_Q$ , the expected number of customers waiting in the queue (not in service)
+
+$$
+N_Q = P_Q\frac{\rho}{1-\rho}
+$$
+
 ## M/G/1 Queue
 
 ### Pollaczek-Khinchin (P-K) Formula
@@ -131,3 +143,26 @@ $$
 ## Priority Queuing: Highest priority queue
 
 ## M/M/k/m
+
+## Example
+
+In 1, traffic is split into k separate channels, that is the frequency- devision multiplexing (**FDM**).
+
+$$
+T = \frac{1}{\mu - \frac{\lambda}{k}} = \frac{k}{k\mu - \lambda}
+$$
+
+In 2, nothing is split.
+
+$$
+T = \frac{1}{k\mu - \lambda}
+$$
+
+In 3, the traffic is lumped together, but the service capacity is split into k servers, that’s **M/M/k**.
+
+$$
+T = \frac{1}{\lambda}P_Q\frac{\rho}{1-\rho} + \frac{1}{\mu}
+$$
+
+![](./images/queue_example.png)
+
