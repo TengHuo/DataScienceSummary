@@ -1,31 +1,6 @@
 # Small World Phenomenon
 
-## Random graphs VS. real networks
-
-### Degree Distribution of a Random Graph
-
-What is P(k)?
-
-- P(k) denotes the fraction of nodes with degree k.
-- P(k) has the Binomial distribution.
-
-$$
-P(k) = \left(\begin{matrix}n-1 \\k\end{matrix}\right) p^k (1-p)^{n-1-k}
-$$
-
-Mean and variance of a Binomial distribution
-
-$$
-E(k) = \bar k = p(n-1)
-$$
-
-$$
-\sigma^2 = p(1-p)(n-1)
-$$
-
 ## Small world phenomenon
-
-
 
 ## Degree distribution - Power Law
 
@@ -33,9 +8,16 @@ $$
 
 ## Preferential Attachments
 
+- Nodes arrive in order $1,2,...,n$ 
+- At step j, let $d_i$ be the degree of node $i<j$
+- A new node j arrives and creates m out-links
+- Probability of j linking to a previous node i is proportional to the degree of node i, that is $d_i$.
 
+$$
+P(j\rightarrow i) = \frac{d_i}{\sum_kd_k}
+$$
 
-
+**Rich get Richer**: New nodes are more likely to link to nodes that already have high degree.
 
 
 

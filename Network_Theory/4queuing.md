@@ -166,3 +166,7 @@ $$
 
 ![](./images/queue_example.png)
 
+**Grouped arrive**
+
+![](./images/queue_example2.png)
+
