@@ -225,7 +225,7 @@ P(E) is the Binomial distribution.
 
 #### Degree Distribution of a Random Graph
 
-A graph in G(n, p) has on average $\left(\begin{matrix}n\\2\end{matrix}\right)p$ edges.
+A graph in G(n, p) has on average $\left(\begin{matrix}n\\2\end{matrix}\right)p$ edges (degrees).
 
 $$
 \left(
